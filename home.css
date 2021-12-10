@@ -1,0 +1,249 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+
+  --dark-blue: #4807e8;
+  --blue: #1714ff;
+  --light-blue: #42a0f7d0;
+
+  --light:#f8f9fa;
+  --black:#000000;
+  --grey:#6c757da4;
+}
+html{
+  background-color:var(--light);
+  color: var(--black);
+  font-size: 62.5%;
+}
+body{
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 18rem 1fr;
+  grid-template-areas: 'header header' 'left right' 'footer footer';
+  
+}
+header{
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(./images/artificial.jpg) no-repeat center/cover;
+  height: 18rem;
+}
+main{
+  grid-area: right;
+  
+  border-radius: 1rem;
+  padding: 1rem 1rem 0;
+}
+div.container{
+  margin-bottom: 1rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  border: 1px solid var(--grey);
+  background-color: var(--light-blue);
+}
+.container.end{
+  margin-bottom: 1rem;
+}
+.container.end .content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.container p:nth-child(1), .container .pContato{
+  padding-right: 1rem;
+}
+div.container p{
+  text-align: left;
+  line-height: 3rem;
+}
+div.content{
+  background-color: var(--light-blue);
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: inline-flex;
+  max-width: 96%;
+  width: 100%;
+  
+}
+.content img{
+  clip-path: circle(15rem);
+}
+aside{
+  grid-area: left;
+  line-height: 5rem;
+}
+aside ul{
+  margin-top: 1rem;
+  background-color: var(--light-blue);
+  border-radius: 0rem 0 1rem 1rem;
+  padding-bottom: 1rem;
+  position: sticky;
+  top: 0;
+}
+aside ul li{
+  max-width: 90%;
+  border-bottom: 2px solid var(--black);
+  cursor: pointer;
+}
+aside ul li:hover{
+  border-bottom: 2px solid var(--blue);
+  transition: 1.2s;
+  border-radius: 1rem;
+}
+h1{
+  font-size: 5rem;
+  color:var(--black);
+  text-shadow: 1px 1px 2px var(--light), 0 0 25px white, 0 0 5px var(--dark-blue);
+}
+.container h2{
+  font-size: 3rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  color: var(--black);
+}
+p{
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--black);
+  text-indent: 3rem;
+}
+a{
+  font-size: 2rem;
+  text-decoration: none;
+  color: var(--black);
+  
+}
+.content a:hover{
+  color: rgba(0, 0, 0, 0.623);
+}
+.content ul li{
+  padding: 1rem;
+  text-align: left;
+}
+ul li{
+  font-size: 2rem;
+}
+footer{
+  
+  grid-area: footer;
+  background-color: var(--black);
+  display: flex;
+  justify-content: space-between;
+  
+}
+footer ul{
+  margin: 1rem 3rem 10rem 0;
+}
+footer li, footer li a{
+  color: var(--light);
+  font-size: 2rem;
+  line-height: 3rem;
+}
+.content .pCurso {
+  text-indent: 0;
+}
+.content .btCurso{
+  cursor: pointer;
+  font-size: 2rem;
+  border-radius: 1rem;
+  background-color: var(--blue);
+  color: var(--light);
+  padding: 0.8rem 1rem;
+}
+.content .btCurso:hover{
+  filter: brightness(1.5);
+}
+/*========= Modal ===============*/
+
+.bgModal{
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bgModal .containerModal{
+  background-color: var(--light);
+  display: flex;
+  width: 50%;
+  height: 50%;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+}
+.bgModal .containerModal .contentModal{
+  background-color: rgb(184, 181, 181);
+  display: block;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: 70%;
+  border-radius: 1rem;
+  
+}
+.bgModal .containerModal .contentModal h2{
+  
+  font-size: 4rem;
+  padding: 1rem;
+
+}
+.bgModal .containerModal .contentModal p{
+  margin-top: 5rem;
+  font-size: 2.2rem;
+}
+.bgModal .containerModal .contentModal .closeModal{
+  background-color: var(--blue);
+  color: var(--light);
+  border-radius: 1rem;
+  width: 20%;
+  height: 4rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+/*=======  Mídia screens  ========*/
+
+@media  screen and (max-width: 992px){
+  .content img{
+    clip-path: circle(12rem);
+  }
+  div .content{
+    display: inline-block;
+  }
+  body{
+    grid-template-areas: 'header header' 'left left' 'right right' 'footer footer';
+  }
+  aside ul{
+    display: flex;
+    padding-right: 3rem;
+    list-style-type: none;
+    justify-content: space-between;
+    line-height: 3rem;
+  }
+}
+@media screen and (max-width: 690px){
+  .content img{
+    clip-path: circle(9rem);
+  }
+
+  aside ul{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+  }
+  aside ul li{
+    
+    max-width: 100%;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+}
