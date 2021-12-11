@@ -30,6 +30,9 @@ header{
   background: url(./images/artificial.jpg) no-repeat center/cover;
   height: 18rem;
 }
+
+/*========== main ==============*/
+
 main{
   grid-area: right;
   
@@ -71,6 +74,9 @@ div.content{
 .content img{
   clip-path: circle(15rem);
 }
+
+/*========== aside ==============*/
+
 aside{
   grid-area: left;
   line-height: 5rem;
@@ -126,13 +132,14 @@ a{
 ul li{
   font-size: 2rem;
 }
+
+/*============= footer =============*/
+
 footer{
-  
   grid-area: footer;
   background-color: var(--black);
   display: flex;
   justify-content: space-between;
-  
 }
 footer ul{
   margin: 1rem 3rem 10rem 0;
@@ -156,6 +163,7 @@ footer li, footer li a{
 .content .btCurso:hover{
   filter: brightness(1.5);
 }
+
 /*========= Modal ===============*/
 
 .bgModal{
@@ -165,7 +173,7 @@ footer li, footer li a{
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
-  z-index: 20;
+  z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,7 +218,8 @@ footer li, footer li a{
   cursor: pointer;
   margin-top: 1rem;
 }
-/*=======  Mídia screens  ========*/
+
+/*=========== media screen(992px) ====================*/
 
 @media  screen and (max-width: 992px){
   .content img{
@@ -229,7 +238,23 @@ footer li, footer li a{
     justify-content: space-between;
     line-height: 3rem;
   }
+  .bgModal .containerModal .contentModal h2{
+    font-size: 4rem;
+    padding-bottom: 0;
+  }
+  .bgModal .containerModal .contentModal p{
+    margin-top: 3rem;
+    text-indent: 0;
+  }
+  .bgModal .containerModal .contentModal .closeModal{
+    width: 25%;
+    margin-top: 2rem;
+  }
+  
 }
+
+/*=========== media screen(690px) ====================*/
+
 @media screen and (max-width: 690px){
   .content img{
     clip-path: circle(9rem);
@@ -245,5 +270,22 @@ footer li, footer li a{
     max-width: 100%;
     cursor: pointer;
     margin-top: 1rem;
+  }
+
+  .bgModal .containerModal{
+    width: 70%;
+    height: 40%;
+  }
+  .bgModal .containerModal .contentModal{
+    width: 80%;
+    height: 80%;
+  }
+  .bgModal .containerModal .contentModal h2{
+    font-size: 3rem;
+    padding-bottom: 0;
+  }
+  .bgModal .containerModal .contentModal p{
+    margin-top: 3rem;
+    text-indent: 0;
   }
 }
