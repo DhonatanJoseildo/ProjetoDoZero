@@ -1,6 +1,7 @@
 
 function closeModal(){
   const bgModal = document.querySelector('.bgModal');
-  
-  bgModal.classList.remove('bgModal');
+  const containerModal = document.querySelector('.containerModal')
+
+  bgModal.style.display = "none"
 }
