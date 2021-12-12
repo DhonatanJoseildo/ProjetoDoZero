@@ -167,8 +167,8 @@ footer li, footer li a{
 /*========= Modal ===============*/
 
 .bgModal{
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 100vw;
+  max-height: 100vh;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -177,46 +177,44 @@ footer li, footer li a{
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 .bgModal .containerModal{
   background-color: var(--light);
   display: flex;
-  width: 50%;
-  height: 50%;
-  align-items: center;
+  width: 35%;
+  height: 35%;
   justify-content: center;
   align-items: center;
   text-align: center;
-  
+  border-radius: 1rem;
 }
 .bgModal .containerModal .contentModal{
-  background-color: rgb(184, 181, 181);
+  background-color: rgb(219, 214, 214);
   display: block;
   align-items: center;
   justify-content: center;
-  width: 70%;
-  height: 70%;
+  width: 90%;
+  height: 90%;
   border-radius: 1rem;
-  
+  padding: 1rem;
 }
 .bgModal .containerModal .contentModal h2{
   
   font-size: 4rem;
-  padding: 1rem;
-
 }
-.bgModal .containerModal .contentModal p{
-  margin-top: 5rem;
+.bgModal .containerModal .contentModal p:nth-child(2){
+  margin-top: 2rem;
   font-size: 2.2rem;
 }
 .bgModal .containerModal .contentModal .closeModal{
-  background-color: var(--blue);
+  background-color: rgba(230, 27, 27, 0.836);
   color: var(--light);
   border-radius: 1rem;
   width: 20%;
   height: 4rem;
   cursor: pointer;
-  margin-top: 1rem;
+  margin-top: 3rem;
 }
 
 /*=========== media screen(992px) ====================*/
@@ -243,12 +241,12 @@ footer li, footer li a{
     padding-bottom: 0;
   }
   .bgModal .containerModal .contentModal p{
-    margin-top: 3rem;
+    margin-top: 2rem;
     text-indent: 0;
   }
   .bgModal .containerModal .contentModal .closeModal{
     width: 25%;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
   
 }
@@ -274,11 +272,11 @@ footer li, footer li a{
 
   .bgModal .containerModal{
     width: 70%;
-    height: 40%;
+    height: 35%;
   }
   .bgModal .containerModal .contentModal{
-    width: 80%;
-    height: 80%;
+    width: 90%;
+    height: 90%;
   }
   .bgModal .containerModal .contentModal h2{
     font-size: 3rem;
